@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
             // Obter índice da letra no alfabeto
             val index = alphabet.indexOf(char)
 
-            result += alphabet[(index - shift).mod(26)]
+            result += alphabet[((index - shift) % 26 + 26) % 26]
         }
 
         println(result)
